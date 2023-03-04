@@ -1,0 +1,26 @@
+.button{
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    cursor: pointer;
+    color: rgb(235, 235, 235);
+}
+
+.button:active{
+    transform: scale(.9);
+}
+
+.contenedor{
+    display: flex;
+    margin-right: 40px;
+}
+
+.contador{
+    border-radius: 50%;
+    background-color: rgb(214, 57, 0);
+    color: rgb(235, 235, 235);
+    height: 18px;
+    width: 18px;
+    text-align: center;
+    margin-bottom: 27px;
+}
