@@ -1,13 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import CountAdd from '../CountAdd'
 import styles from "./itemDetail.module.css"
 
-async function ItemDetail() {
+function ItemDetail() {
     const { id } = useParams()
-    const producto = await fetch('../productos.json').then(res=>res.json()).then(json=> {return json.find(prod => prod.id == id)})
+    const [producto, setProducto] = useState({})
+
+    const getProducto = async () => {
+        try{
+            const response = await fetch("../productos.json")
+            const json = await response.json()
+            const producto = json.find(prod => prod.id == id) 
+            setProducto(producto)
+        }catch (err){
+            console.log(err);
+        }
+        
+       
+    }
+
+    useEffect(() => {
+      getProducto();
+    }, []);
     
-    console.log(producto);
     return (
         <div className={styles.contenedor}>
             <div className={styles.contImg}>
@@ -23,12 +39,14 @@ async function ItemDetail() {
                     </div>
                 </div>
                 <div className={styles.contDescription}>
+                    
                     <span className={styles.categoria}>description</span>
-                    <p className={styles.description}><span className={styles.spanDescription}>Gender:</span> {producto.description.genre}</p>
+                    <p className={styles.description}><span className={styles.spanDescription}>Gender:</span> {producto.genre}</p>
                     <p className={styles.description}><span className={styles.spanDescription}>Brand:</span> {producto.brand}</p>
-                    <p className={styles.description}><span className={styles.spanDescription}>Color:</span> {producto.description.color}</p>
-                    <p className={styles.description}><span className={styles.spanDescription}>Discipline:</span> {producto.description.discipline}</p>
+                    <p className={styles.description}><span className={styles.spanDescription}>Color:</span> {producto.color}</p>
+                    <p className={styles.description}><span className={styles.spanDescription}>Discipline:</span> {producto.discipline}</p>
                 </div>
+                
                 <CountAdd /> 
             </div>
         </div>
