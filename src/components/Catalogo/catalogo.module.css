@@ -1,0 +1,19 @@
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-right: 73px;
+}
+
+.texto{
+    color: rgb(240, 240, 240);
+    cursor: pointer;
+    padding: 10px;
+    transition: all .5s ease;
+    border-radius: 10px;
+}
+
+.texto:hover{
+    background-color: rgb(240, 240, 240);
+    color: rgb(41, 41, 41);
+}

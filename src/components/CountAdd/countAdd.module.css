@@ -1,0 +1,50 @@
+.contenedor{
+    width: 171px;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, rgb(203, 255, 187), rgb(252, 252, 252), rgb(187, 255, 187));
+    gap: 30px;
+    color: rgb(41, 41, 41);
+    border-radius: 10px;
+    font-size: 20px;
+  }
+  
+  .main{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+  }
+  
+  .add{
+    width: 182px;
+    margin-left: 30px;
+    color: rgb(53, 53, 53);
+    background-color: rgb(252, 252, 252);
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .add:hover{
+    background-color: rgb(53, 53, 53);
+    color: rgb(252, 252, 252);
+  }
+  
+  .add:active{
+    transform: scale(.9);
+  }
+
+  button {
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    width: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 18px;
+    color: rgb(41, 41, 41);
+   }
+
+   button:active{
+     transform: scale(0.6);
+   }

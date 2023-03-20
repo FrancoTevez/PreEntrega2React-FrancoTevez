@@ -1,0 +1,32 @@
+.contenedor{
+    width: 400px;
+    min-height: 200px;
+    background-color: white;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    transition: all .2s ease;
+}
+
+.contenedor:hover{
+    box-shadow: 0 0 25px -4px rgb(15, 15, 15);
+}
+
+img{
+    width: 120px;
+    height: 120px;
+    margin-top: 5px;
+}
+
+h2{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(43, 43, 43);
+}

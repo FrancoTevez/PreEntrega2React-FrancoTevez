@@ -1,9 +1,13 @@
 import React from 'react'
+import ItemList from '../ItemList'
 import styles from './item.module.css'
 
-function ItemListContainer({greeting}) {
+function ItemListContainer({products}) {
   return (
-    <p className={styles.texto}>{greeting}</p>
+    <div className={styles.contenedor}>
+      <h1>TODOS NUESTROS PRODUCTOS</h1>
+      <ItemList products={products}/>
+    </div>
   )
 }
 

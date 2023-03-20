@@ -1,13 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import CartWidget from '../CartWidget'
+import Catalogo from '../Catalogo'
 import styles from "./navbar.module.css"
 
 function Navbar() {
   return (
     <nav className={styles.contenedor}>
-        <span className={styles.brand}>MODUZ.</span>
-        <input type="text" placeholder='Que estás buscando?' id='buscador' className={styles.buscador}/>
-        <CartWidget /> 
+        <Link to="/"> 
+            <span className={styles.brand}>MODUZ.</span>
+        </Link>
+        <Catalogo />
+        <CartWidget />  
     </nav>
   )
 }

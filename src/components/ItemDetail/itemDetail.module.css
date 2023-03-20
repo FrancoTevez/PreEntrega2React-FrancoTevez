@@ -1,0 +1,75 @@
+.imagen{
+    width: 400px;
+    height: 400px;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+}
+
+.contImg{
+    height: 600px;
+    padding: 0px 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.contProducto{
+    background-color: white;
+    width: 600px;
+    border-radius: 10px;
+    padding: 20px 30px 30px;
+}
+
+.titulo{
+    color: rgb(56, 56, 56);
+    margin-top: 20px;
+}
+
+.categoria{
+    color: rgba(0, 0, 0, 0.411);
+    font-size: 18px;
+}
+
+.price{
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(56, 56, 56);
+    color: rgb(115, 216, 75);
+    border-radius: 10px;
+}
+
+.contPrice{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.rating{
+    color: rgb(243, 243, 243);
+}
+
+.contDescription{
+    margin-top: 40px;
+    background-color: white;
+    width: 600px;
+    border-radius: 10px;
+    padding: 20px 30px 30px;
+}
+
+.description{
+    margin-top: 15px;
+    font-weight: 600;
+    color: rgb(56, 56, 56);
+}
+
+.spanDescription{
+    color: rgba(38, 134, 0, 0.836);
+}
