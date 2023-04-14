@@ -11,12 +11,12 @@
 }
 
 .contImg{
-    height: 600px;
-    padding: 0px 30px;
-    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 600px;
+    padding: 0px 30px;
+    background-color: white;
     border-radius: 10px;
 }
 

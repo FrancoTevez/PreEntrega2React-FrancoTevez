@@ -1,0 +1,13 @@
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    gap: 210px;
+    margin-right: 75px; 
+    font-size: 18px;
+}
+
+.contButon{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}

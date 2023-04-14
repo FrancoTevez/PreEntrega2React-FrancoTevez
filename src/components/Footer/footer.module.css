@@ -1,0 +1,52 @@
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(41, 41, 41);
+    width: 100%;
+    gap: 20px;
+}
+
+.links{
+    color: rgb(243, 243, 243);
+}
+
+.nombre{
+    color: rgb(243, 243, 243);
+    margin-left: 0;
+    margin-top: 40px;
+}
+
+.contLink{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 47px;
+    gap: 20px;
+}
+
+.igBack, .gitBack{
+    padding: 8px 10px 5px;
+    border-radius: 10px;
+    transition: all .2s ease;
+}
+
+.igBack{
+    background: linear-gradient(45deg, #FFDC80, #F56040, #FD1D1D, #C13584, #C13584, #833AB4, #5851DB, #405DE6);
+}
+
+.igBack:hover{
+    box-shadow: 0px 0px 15px 0px rgb(154, 74, 161);
+}
+
+.gitBack{
+    background: linear-gradient(45deg, #c4c3c3, #5f5f5f, #3a3a3a, #2b2b2b);
+}
+
+.gitBack:hover{
+    box-shadow: 0px 0px 15px 0px rgb(107, 107, 107);
+}
+
+.gitBack:active, .igBack:active{
+    transform: scale(.94);
+}

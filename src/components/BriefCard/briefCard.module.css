@@ -1,0 +1,33 @@
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+.contImgPrecio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.contImg{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.pCantidad{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.titleProductos{
+    font-size: 16px;
+    color: rgb(rgb(43, 43, 43));
+    margin-top: 20px;
+}

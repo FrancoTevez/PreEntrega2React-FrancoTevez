@@ -1,5 +1,7 @@
+import { doc, getDoc,} from 'firebase/firestore';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import db from '../../../db/firebase-config';
 import CountAdd from '../CountAdd'
 import styles from "./itemDetail.module.css"
 
@@ -8,21 +10,18 @@ function ItemDetail() {
     const [producto, setProducto] = useState({})
 
     const getProducto = async () => {
-        try{
-            const response = await fetch("../productos.json")
-            const json = await response.json()
-            const producto = json.find(prod => prod.id == id) 
-            setProducto(producto)
-        }catch (err){
-            console.log(err);
-        }
-        
-       
+        const docRef = doc(db, "items", id)
+        const docSnap = await getDoc(docRef)
+        if(docSnap.exists()){
+            setProducto(docSnap.data())
+        }else{
+            console.log("No such document!")
+        } 
     }
 
     useEffect(() => {
       getProducto();
-    }, []);
+    }, [id]);
     
     return (
         <div className={styles.contenedor}>
@@ -47,7 +46,7 @@ function ItemDetail() {
                     <p className={styles.description}><span className={styles.spanDescription}>Discipline:</span> {producto.discipline}</p>
                 </div>
                 
-                <CountAdd /> 
+                <CountAdd producto={producto}/> 
             </div>
         </div>
     )

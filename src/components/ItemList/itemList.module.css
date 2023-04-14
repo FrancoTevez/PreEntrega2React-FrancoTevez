@@ -5,4 +5,5 @@
     grid-template-columns: 1fr 1fr 1fr;
     place-items: center;
     gap: 20px;
+    min-height: 52vh;
 }

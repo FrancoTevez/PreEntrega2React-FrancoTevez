@@ -1,0 +1,36 @@
+.contenedor{
+    width: 1200px;
+    min-height: 200px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    transition: all .2s ease;
+    margin-bottom: 20px;
+}
+
+.contenedor:hover{
+    box-shadow: 0 0 25px -4px rgb(15, 15, 15);
+}
+
+.contDatos, .contTitle{
+    display: flex;
+    flex-direction: row;
+}
+
+.contTitle{
+    align-items: center;
+    margin-left: 20px;
+}
+
+.imgCart{
+    width: 220px;
+    height: auto;
+}
+
+h2{
+    margin-left: 10px;
+    color: rgb(43, 43, 43)
+}
