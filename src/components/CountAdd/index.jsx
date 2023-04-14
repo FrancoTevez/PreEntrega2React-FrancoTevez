@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import styles from "./countAdd.module.css"
 import { addDoc, collection, doc, getDocs, updateDoc } from 'firebase/firestore';
 import db from '../../../db/firebase-config';
@@ -7,16 +7,9 @@ import { CounterContext } from '../context/CounterContext';
 function CountAdd({producto}) {
     const [count, setCount] = useState(0)
     const itemRef = collection(db, "cart")
-    const {getCant} = useContext(CounterContext)
- 
-    const getItems = async () => {
-        const itemsCollection = await getDocs(itemRef)
-        const items = itemsCollection.docs.map((doc) => ({...doc.data(), id: doc.id}))
-        return items
-    }
+    const {getCant, items} = useContext(CounterContext)
     
     const addItem = async () => {
-        const items = await getItems()
         const item = {price: `${producto.price}`, title: `${producto.title}`, image: `${producto.image}`, cantidad: count}
         const repetido = items.find(prod => prod.title == item.title)
         if(repetido){

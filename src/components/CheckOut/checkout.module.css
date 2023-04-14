@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 74vh;
+    margin-bottom: 6px;
 }
 
 .contBrief{

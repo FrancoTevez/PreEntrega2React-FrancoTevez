@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     width: 400px;
-    max-height: 285px;
+    min-height: 285px;
     gap: 20px;
     background-color: white;
     padding: 20px;
@@ -38,4 +38,31 @@ input{
 
 .buttonCompra:active{
     transform: scale(.94);
+}
+
+.buttonCompraDisabled{
+    padding: 10px 20px;
+    text-align: center;
+    transition: all .2s ease;
+    border-radius: 10px;
+    width: 200px;
+    color: rgb(161, 161, 161);
+    background-color: rgb(224, 224, 224);
+    cursor: default;
+}
+
+.buttonCompraDisabled:active{
+    transform: scale(1);
+}
+
+.spanEmail{
+    font-size: 14px;
+    color: rgb(255, 60, 60);
+    width: 95%;
+}
+
+.spanLoad{
+    font-size: 14px;
+    color: rgb(2, 133, 2);
+    width: 95%;
 }

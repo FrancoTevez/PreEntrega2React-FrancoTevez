@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import ItemList from '../ItemList'
 import styles from './item.module.css'
 import { useParams } from 'react-router-dom'
 import CircularIndeterminate from '../CircularIndeterminate'
+import { CounterContext } from '../context/CounterContext'
 
 function ItemListContainer({products}) {
+  const {getCant} = useContext(CounterContext)
   const [load, setLoad] = useState(true)
   const [productos, setProductos] = useState([])
   const { category } = useParams()
@@ -16,14 +18,15 @@ function ItemListContainer({products}) {
     }else{
       setProductos(products)
     }
-    setLoad(false)
+    setTimeout(() => {
+      setLoad(false)
+    }, 1000);
+    
   }
   
   useEffect(() => {
-    setTimeout(() => {
-      getProduct()
-    }, 1000);
-    
+    getProduct()
+    getCant()
   }, [products, category])
   
 

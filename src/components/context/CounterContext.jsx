@@ -1,4 +1,4 @@
-import { collection, getDocs } from "firebase/firestore";
+import { collection, deleteDoc, getDocs } from "firebase/firestore";
 import { createContext, useEffect, useState } from "react";
 import db from "../../../db/firebase-config";
 
@@ -22,10 +22,6 @@ const CounterProvider = ({ children }) => {
         setPriceTotal(precioTotal)
         setLength(items.length)
     }
-
-    useEffect(() => {
-      getCant()
-    }, [items])
     
     return (
         <CounterContext.Provider value={{cant, getCant ,length, priceTotal, items}}>

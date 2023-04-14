@@ -12,6 +12,7 @@ En la **App**, encontrarás todos los productos disponibles en el *home*, al **c
 En el **Nav** estarán las dos categorias separadas por zapatillas y por botas, también verás un ícono de un carrito que te llevará a la ruta del **cart**, donde estarán todos los productos agregador con la posibilidad de eliminar los no deseados o subir/bajar su cantidad. A la derecha de los productos verás un botón para *finalizar la compra* que te llevará a la ruta del **Check Out**.
 
 En el **Check Out** estará el botón para *realizar la compra*, pero antes tendrás que completar un formulario con tus datos.
+luego de realizar la compra, se te informara que la compra de realizó con éxito y te dará tu **Número de Orden** + tu **ID de compra**
 
 ## Como levantar el proyecto
 
